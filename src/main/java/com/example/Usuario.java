@@ -8,7 +8,7 @@ public class Usuario {
     private String contrasena;
     private static  HashMap<String, String> usuriosReguistrados = new HashMap<>();
 
-    public Usuario() {
+    public Usuario(String nombre, String contrasena) {
         this.nombre = nombre;
         this.contrasena = contrasena;
         agregarUsuario(nombre,contrasena);
@@ -61,12 +61,7 @@ public class Usuario {
         System.out.print("Ingrese la contraseña : ");
         String contrasena = scanner.nextLine();
 
-
-        //  Se consume la nueva línea pendiente después de nextInt()
-        scanner.nextLine();
-
         Usuario.agregarNuevoUsuario(nombre, contrasena);
-
 
         scanner.close();
 
@@ -74,6 +69,7 @@ public class Usuario {
 
 
 }
+
 
 
 
